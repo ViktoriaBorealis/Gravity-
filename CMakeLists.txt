@@ -22,7 +22,7 @@ enable_testing()
 
 FetchContent_MakeAvailable(threepp)
 
-add_executable(GravSim runProgram.cpp)
+add_executable(GravSim runSim.cpp)
 
 
 add_subdirectory(tests)
@@ -30,4 +30,4 @@ target_link_libraries(GravSim PUBLIC threepp::threepp)
 target_include_directories(GravSim PUBLIC include)
 
 #target_compile_definitions(GravSim PUBLIC DATA_DIR="${CMAKE_BINARY_DIR}/bin")
-file(COPY Levels DESTINATION "${CMAKE_BINARY_DIR}/bin") #Dette funker!
+
